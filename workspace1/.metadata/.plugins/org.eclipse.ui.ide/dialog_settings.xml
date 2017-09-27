@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="P:\Module 4\Basic Spring 4.0 - 3 Days - Share\Basic Spring 4.0 - 3 Days - Share\Demos\Lesson02\Lesson02\DemoMVC_3"/>
+			<item value="P:\Module 4\Basic Spring 4.0 - 3 Days - Share\Basic Spring 4.0 - 3 Days - Share\Demos\Lesson03"/>
+			<item value="P:\134212_JayeshBolke_SetD\134212_Jayesh Bolke_Set D\OnlineGamingSystem"/>
+			<item value="P:\Users\skuma182\workspace1"/>
+			<item value="P:\Users\skuma182\Desktop\Module3_Assignment_134362"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

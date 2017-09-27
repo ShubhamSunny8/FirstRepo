@@ -1,0 +1,21 @@
+package com.cg.hr.restcontrollers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cg.hr.dto.Employee;
+import com.cg.hr.exception.EmpException;
+import com.cg.hr.services.EmpServices;
+
+
+@RestController
+public class EmpRestServices {
+	@Autowired
+	private EmpServices services;
+	public List<Employee> getEmpList() throws EmpException{
+		List<Employee> empList =services.getEmpList();
+		return empList;
+	}
+}

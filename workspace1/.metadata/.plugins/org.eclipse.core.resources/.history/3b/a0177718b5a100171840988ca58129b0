@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="ISO-8859-1">
+<title>Bill Calculation</title>
+<script type="text/javascript" src="/NgJS_010/Script/angular.js"></script>
+</head>
+<body>
+<input type="number" id="productCost" value="0" ng-model="cost">
+<input type="number" id="productQty" value="1" ng-model="qty">
+</body>
+</html>

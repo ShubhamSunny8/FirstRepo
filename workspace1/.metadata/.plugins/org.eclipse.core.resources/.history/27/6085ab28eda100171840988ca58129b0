@@ -1,0 +1,9 @@
+package com.capgemini.bean;
+
+public class MovieMaster {
+
+	public MovieMaster() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

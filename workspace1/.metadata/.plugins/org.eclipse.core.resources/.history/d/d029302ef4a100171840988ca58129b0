@@ -1,0 +1,14 @@
+package com.capgemini.dao;
+
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+import com.capgemini.bean.MovieMaster;
+import com.capgemini.exception.BookingException;
+
+
+public interface MovieDao {
+	public MovieMaster getMoviebyId(String MovieId) throws BookingException, SQLException, NamingException;
+	public boolean update(String MovieId) throws BookingException, SQLException, NamingException;
+}

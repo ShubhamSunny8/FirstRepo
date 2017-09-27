@@ -1,0 +1,2 @@
+var billModule= angular.module("billModule",[]);
+billModule.controller()

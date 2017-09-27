@@ -1,0 +1,13 @@
+package com.capgemini.service;
+
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+import com.capgemini.bean.MovieMaster;
+import com.capgemini.exception.BookingException;
+
+public interface MovieService {
+	public MovieMaster getMoviebyId(String MovieId) throws BookingException, SQLException, NamingException;
+	public boolean update(String MovieId) throws BookingException, SQLException, NamingException;
+}

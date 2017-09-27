@@ -1,0 +1,116 @@
+package com.capgemini.controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.capgemini.dth.bean.Customer;
+import com.capgemini.dth.dao.Dthdao;
+import com.capgemini.dth.dao.DthdaoImp;
+import com.capgemini.dth.exception.Dthexception;
+
+/**
+ * Servlet implementation class Controller
+ */
+@WebServlet("/firstservlet")
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Controller() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String target="";
+		String sucess = "sucess.jsp";
+		String search = "search.jsp";
+		String targetError = "error.jsp";
+		String targetHome = "index.jsp";
+		Dthdao Service =new DthdaoImp();
+		HttpSession session=request.getSession(true);
+		String path = request.getServletPath().trim();
+		System.out.println(path);
+		switch (path) {
+		
+		case "/viewall.obj":
+				
+				 Customer custList1=new Customer();
+
+					String mobno=request.getParameter("number");
+					session.setAttribute("mobilenum",mobno);
+					try {
+					custList1=Service.getCustomerbyId(mobno);
+					session.setAttribute("currentbalance", custList1);
+					
+					//System.out.println(session.getAttribute("currentbalance"));
+				} catch (Dthexception | SQLException | NamingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+					ArrayList a=new ArrayList();
+					a.add(custList1);
+					session.setAttribute("a", a);
+					target = search;		 
+				 break;
+		
+				 
+		case "/recharge.obj":
+			boolean b = false;
+			int amount=Integer.parseInt(request.getParameter("amount"));
+			System.out.println("after 14st"+amount);
+			
+			
+			long id=Long.parseLong((String)session.getAttribute("mobilenum"));
+			System.out.println("hello1");
+			Customer cst=(Customer)session.getAttribute("currentbalance");
+			float currbal=cst.getBalance();
+			System.out.println("currentBalance is"+currbal);
+			
+			
+				try {
+					System.out.println("hello12");
+					 b=Service.update(amount+currbal, id);
+					 System.out.println("hello13");
+				} catch (Dthexception | SQLException | NamingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			if(b==true) {
+				System.out.println("Sucessfully updated");
+			}
+			else{
+				target=targetError;
+			}
+			target=sucess;
+			}
+		RequestDispatcher dispatcher = request.getRequestDispatcher(target);
+		dispatcher.forward(request, response);	
+		
+		
+	}
+
+}

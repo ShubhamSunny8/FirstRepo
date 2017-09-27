@@ -1,0 +1,25 @@
+// A factory method . modulecreates a module object
+var billModule= angular.module("billModule",[]);
+billModule.controller("billController",function($scope){
+	$scope.bill={
+			'ctc' 		:0,
+	};
+
+
+$scope.calcbasic =function(){
+	return $scope.bill.ctc *0.5;
+};
+
+$scope.calchra =function(){
+	return $scope.bill.ctc *0.4;
+};
+
+$scope.totaltax =function(){
+	return  $scope.calcbasic() + $scope.calchra();
+};
+
+$scope.totalSal =function(){
+	return $scope.calcTotalBill() * $scope.bill.discount /100;
+};
+}
+);

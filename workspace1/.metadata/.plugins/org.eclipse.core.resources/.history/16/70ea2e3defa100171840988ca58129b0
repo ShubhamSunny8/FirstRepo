@@ -1,0 +1,30 @@
+package com.capgemini.dao;
+
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
+
+import com.capgemini.bean.MovieMaster;
+import com.capgemini.exception.BookingException;
+
+public class MovieDaoImpl implements MovieDao {
+
+	public MovieDaoImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public MovieMaster getMoviebyId(String MovieId) throws BookingException,
+			SQLException, NamingException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean update(String MovieId) throws BookingException,
+			SQLException, NamingException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.capgemini.bean;
+
+public class MovieMaster {
+
+	public MovieMaster() {
+		// TODO Auto-generated constructor stub
+	}
+	String movie_id ;
+	String movie_name ,
+	theatre_name ,theatre_location ,
+	city varchar2(20),
+	show_timing varchar2(10),
+	status 
+	
+
+}

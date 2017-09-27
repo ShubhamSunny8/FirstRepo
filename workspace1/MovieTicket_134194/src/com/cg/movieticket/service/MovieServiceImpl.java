@@ -1,0 +1,40 @@
+package com.cg.movieticket.service;
+
+import java.util.ArrayList;
+
+import com.cg.movieticket.bean.Ticket;
+import com.cg.movieticket.dao.MovieDaoImpl;
+import com.cg.movieticket.exception.MovieException;
+
+public class MovieServiceImpl implements MovieService{
+
+	MovieDaoImpl dao = null;
+	
+	public MovieServiceImpl() {
+
+		dao = new MovieDaoImpl();
+		
+	}
+	
+	
+	@Override
+	public ArrayList<Ticket> showMovieDetails(String city, String movie)
+			throws MovieException {
+		// TODO Auto-generated method stub
+		System.out.println("inside service");
+		return dao.showMovieDetails(city, movie);
+		
+	}
+
+
+	@Override
+	public boolean updateStatus(String movieId) throws MovieException {
+		// TODO Auto-generated method stub
+		return dao.updateStatus(movieId);
+	}
+
+	
+
+	
+
+}

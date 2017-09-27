@@ -1,0 +1,19 @@
+
+Sep 25, 2017 24:03:15.52 NEW SESSION
+Sep 25, 2017 24:03:15.52 1506312195511	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+Sep 25, 2017 24:03:19.05 1506312199042	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+Sep 25, 2017 24:08:17.71 console.log: shutdown APP_SHUTDOWN
+Sep 25, 2017 24:08:18.89 Unable to read VR Path Registry from P:\Users\skuma182\AppData\Local\openvr\openvrpaths.vrpath
+Sep 25, 2017 24:42:55.99 1506314576005	addons.update-checker	WARN	Update manifest for clicktoplay-rollout@mozilla.org did not contain an updates property
+Sep 25, 2017 24:42:56.01 1506314576019	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Sep 25, 2017 24:42:56.01 1506314576031	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+Sep 25, 2017 24:42:56.02 1506314576043	addons.update-checker	WARN	Update manifest for webcompat@mozilla.org did not contain an updates property
+Sep 25, 2017 24:42:56.04 1506314576056	addons.update-checker	WARN	Update manifest for aushelper@mozilla.org did not contain an updates property
+Sep 25, 2017 24:42:56.23 1506314576219	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Sep 25, 2017 24:42:56.23 1506314576238	addons.update-checker	WARN	Update manifest for followonsearch@mozilla.com did not contain an updates property
+Sep 25, 2017 24:42:56.24 1506314576263	addons.update-checker	WARN	Update manifest for onboarding@mozilla.org did not contain an updates property
+Sep 25, 2017 24:42:57.79 1506314577809	addons.xpi	ERROR	Failed to clean updated system add-ons directories.
+Sep 25, 2017 01:39:14.67 console.log: shutdown APP_SHUTDOWN
+Sep 25, 2017 01:39:19.02 Unable to read VR Path Registry from P:\Users\skuma182\AppData\Local\openvr\openvrpaths.vrpath
+Sep 25, 2017 02:31:32.72 console.log: shutdown APP_SHUTDOWN
+Sep 25, 2017 02:31:34.95 Unable to read VR Path Registry from P:\Users\skuma182\AppData\Local\openvr\openvrpaths.vrpath

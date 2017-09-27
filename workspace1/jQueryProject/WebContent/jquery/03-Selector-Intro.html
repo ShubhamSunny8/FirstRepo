@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>jQuery-Selectors</title>
+<script src="./scripts/jquery-1.12.3.js"></script>
+<script type="text/javascript">
+$(document).ready(
+		/* function(){
+			var ref=$("input");// variable has been defined for tag if I use tag it becomes a universal accptor of tags
+			var strVar="";//# represents id if we use .para it will show p3 tsg (. for class)
+	//		for(i=0;i<pars.length())
+			alert("Total no of tags"+ref.length);
+			for(i=0;i<ref.length;i++)
+			{
+			strVar+=ref[i].innerHTML+"\n";
+			}
+			alert("Total no of tags"+ref.length+"\n"+strVar);
+		} */
+
+
+
+		var button=$('Button').click(
+			function()
+			
+		{
+				$this.html("Clicked");
+		});
+		);
+
+</script>
+</head>
+<body>
+	<p>P1</p>
+	<p id="p2">P2</p>
+	<p class="para">P3</p>
+	<p class="para">I am working in Capgemini</p>
+	<div>
+		<p>P4</p>
+	</div>
+	<p data-custom="capgemini">P5</p>
+	<p data-custom="capgemini india">P6</p>
+	<p data-custom="capgemini">P7</p>
+	
+	<input type="text"/>
+	<input type="text" disabled/>
+	<input type="radio" checked/>
+	<input type="radio"/>
+	<input type="checkbox"/>
+	<input type="checkbox" checked/>
+	<input type="button" value="Button"/>
+	<input type="button" value="Button1" disabled/>
+	<input type="submit" value="Submit"/>
+	<input type="hidden"/>
+	<br/>
+	<div></div>
+	<button id="status">Go</button>
+</body>
+
+</html>
+
+<!-- 
+Copy following statements one by one in the Console of browser to test different type of selector
+
+$('p') // Tag Selector
+$('*') // Universal Selector
+$('#p2') // id selector
+$('.para') // class selector
+$('[data-custom]') // attribute selector
+$('[data-custom="capgemini"]') // attribute selector
+$('[data-custom^="capgemini"]') // attribute selector
+$('[data-custom$="india"]') // attribute selector
+$('[data-custom*="gemini"]') // attribute selector
+$(':input') // All Form elements
+$(':text') // Only Textboxes
+$(':radio') // Only Radio button
+$(':checkbox') // Only Checkboxes
+$(':button') // Only button
+$(':submit') // Only submit button
+
+$('p:first')
+$('p:last')
+$('p:eq(5)') // 6th Para
+$('p:contains("working")')
+$('p:odd')
+$('p:even')
+
+$(':text')
+$(':text:first')
+$(':text:disabled')
+$(':text:visible')
+$(':hidden')
+$(':input:hidden')
+$(':radio:checked')
+
+-->

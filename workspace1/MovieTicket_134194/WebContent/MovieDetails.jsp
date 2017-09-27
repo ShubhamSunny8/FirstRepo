@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Movie Details</title>
+</head>
+<body>
+<center>
+<b>${sessionScope.movie}</b> is being shown at the following theatres in <b>${sessionScope.city}<br></b>
+<br><br>
+
+<table border="1">
+	<tr>
+		<th>Theater Name</th>
+		<th>Location</th>
+		<th>Show Time</th>
+		<th>Status</th>
+		<th>Book Now</th>
+	</tr>
+ 	<c:forEach var="ticket" items="${sessionScope.list}">
+		<tr>
+			<td>${ticket.theatreName}</td>
+			<td>${ticket.theatreLocation}</td>
+			<td>${ticket.showTiming}</td>
+			<td>${ticket.status}</td>
+			<td><a href="Booked.obj?id=${ticket.movieId}">Book Now</a></td>
+	</c:forEach>
+</table>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+package com.capgemini.service;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.NamingException;
+
+import com.capgemini.bean.MovieMaster;
+import com.capgemini.dao.MovieDao;
+import com.capgemini.dao.MovieDaoImpl;
+import com.capgemini.exception.BookingException;
+
+public class MovieServiceimpl implements MovieService {
+
+
+
+	
+
+	@Override
+	public boolean update(String MovieId) throws BookingException,
+			SQLException, NamingException {
+		MovieDao dao=new MovieDaoImpl();
+		
+		return dao.update(MovieId);
+	}
+
+	@Override
+	public ArrayList<MovieMaster> getMoviebyId(String MovieId, String City)
+			throws BookingException, SQLException, NamingException {
+	MovieDao dao=new MovieDaoImpl();
+	return dao.getMoviebyId(MovieId, City);
+	}
+
+	
+}

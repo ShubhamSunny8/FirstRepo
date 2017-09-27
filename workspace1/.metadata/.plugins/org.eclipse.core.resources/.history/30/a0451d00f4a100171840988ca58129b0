@@ -1,0 +1,59 @@
+package com.capgemini.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.naming.NamingException;
+
+import com.capgemini.bean.MovieMaster;
+import com.capgemini.exception.BookingException;
+import com.capgemini.utility.DbConnection;
+
+public class MovieDaoImpl implements MovieDao {
+
+	
+
+	@Override
+	public MovieMaster getMoviebyId(String MovieId) throws BookingException,
+			SQLException, NamingException {
+		System.out.println("Connection in dao impl");
+		Connection connect=DbConnection.getConnection();
+		//Statement stmt=connect.createStatement(); 
+		 	MovieMaster movie=null;
+		 	ResultSet rs=null;
+		  String qry="Select * from movie_master where movie_id=?";
+		  try(PreparedStatement stat=connect.prepareStatement(qry);)
+		  {
+			System.out.println("prepatred Ststemnt done");
+			  stat.setString(1, MovieId);
+			  rs=stat.executeQuery();
+				  if(rs.next())
+				  {
+					  System.out.println("Result set is true");
+					 String movie_id = rs.getString("movie_id");
+					 String movie_name = rs.getString("movie_name");
+					 String  theatre_name = rs.getString("theatre_name");
+					 String theatre_location  = rs.getString("theatre_location");
+					 String  city=rs.getString("city");
+					 String show_timing=rs.getString("show_timing");
+					 String  status=rs.getString("status");
+					
+					 movie=new MovieMaster(movie_id,movie_name,theatre_name,theatre_location,city,show_timing,status);
+				  }
+			
+		
+		  	}
+		  
+		  return movie;
+	}
+	@Override
+	public boolean update(String MovieId) throws BookingException,
+			SQLException, NamingException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
