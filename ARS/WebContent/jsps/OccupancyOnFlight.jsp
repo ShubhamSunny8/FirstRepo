@@ -6,14 +6,20 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Insert title here</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div align="right"><a href="getLoginPage.do">Logout</a></div>
 		<center>
 			<form action="getOccupancyOnFlight.do">
-				<b>Enter Flight No :  </b>
+				
+			<h3><span class="label label-default">Enter Flight No.</span></h3>
 				<input type = "text" name="flightNo" maxlength="4" pattern="[1-9][0-9]{3}" title="Example : 7845" required>
-				<input type="submit" value="View Occupancy">
+				<button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span>View Occupancy</button>
+				<!-- <input type="submit" value="View Occupancy"> -->
 			</form>
 			<br><br>
 			
